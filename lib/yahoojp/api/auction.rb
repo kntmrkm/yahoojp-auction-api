@@ -15,7 +15,7 @@ module YahooJp
           if v == 'V1' then
             url = ['http:/', @@base_uri, v, api].join('/')
           elsif v == 'V2' then
-            url = ['http:/', @@base_uri, v, 'json', api].join('/')
+            url = ['http:/', @@base_uri, v, api].join('/')
           end
           YahooJp::Request.get(url, opts)
         else
